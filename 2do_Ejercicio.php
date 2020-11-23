@@ -1,31 +1,14 @@
 <?php
-$numero=8;
-if(primo($numero))
-{
-    echo $numero." es primo";
-}
-else
-{
-    echo $numero." no es primo";
-}
-function primo($num)
-{
-    if($num == 1 || $num==2 || $num==3 || $num==5 || $num==7)
-    {
-        return true;
+$nro=18;
+$cont=0;
+for ($i=1; $i <= $nro; $i++) { 
+    if($nro % $i == 0){
+        $cont++;
     }
-    if($num>=8)
-    {
-        if($num%2==0 || $num%3==0 || $num%5==0)
-        {
-            return false;
-        }
-        if($num>=8)
-        {
-            if($num%2>=1 ||$num%3>=1||$num%5>=1)
-            {
-                return true;
-            }
-        }
-    }
+}
+if($cont <= 2){
+    echo"El numero".$nro." es primo ";
+}
+else {
+    echo"El numero".$nro." no es primo ";
 }
